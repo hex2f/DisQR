@@ -6,7 +6,7 @@
 //
 
 extension DisQR {
-    class User {
+    public class User {
         var id:String = ""
         var username:String = ""
         var discrim:String = ""

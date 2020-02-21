@@ -1,7 +1,7 @@
 import SwiftyJSON
 
 struct DisQR {
-    enum State {
+    public enum State {
         case uninitialized
         case initializing
         case initialized
@@ -10,7 +10,7 @@ struct DisQR {
         case success
     }
     
-    class Authenticator {
+    public class Authenticator {
         var handlers:[String:SocketHandlerFunc] = [:]
         
         var socket:Socket

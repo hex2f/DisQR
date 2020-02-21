@@ -10,7 +10,7 @@ import Starscream
 import SwiftyJSON
 
 extension DisQR {
-    enum SocketState {
+    public enum SocketState {
         case disconnected
         case connecting
         case connected
