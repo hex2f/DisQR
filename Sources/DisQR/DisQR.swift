@@ -116,7 +116,7 @@ struct DisQR {
             }
             
             // Update the token on the User
-            self.user.token = token
+            self.user!.token = String(decoding: token, as: UTF8.self)
             
             self.state = .success
         }
