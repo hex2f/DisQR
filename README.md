@@ -1,3 +1,3 @@
 # DisQR
 
-A description of this package.
+Authenticate with Discord using their QR sign-in
