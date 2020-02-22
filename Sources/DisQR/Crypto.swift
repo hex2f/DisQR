@@ -18,7 +18,6 @@ public class Crypto {
         let attributes: [String: Any] = [
             kSecAttrKeyType as String: kSecAttrKeyTypeRSA,
             kSecAttrKeySizeInBits as String: 2048,
-            kSecPrivateKeyAttrs as String: []
         ]
         
         var error: Unmanaged<CFError>?
