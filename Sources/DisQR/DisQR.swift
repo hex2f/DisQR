@@ -56,11 +56,7 @@ public struct DisQR {
         }
         
         func handle_disconnect(_:JSON) {
-            if self.state != .success {
-                self.state = .failed
-            } else {
-                self.state = .uninitialized
-            }
+
         }
         
         func prove_nonce(json:JSON) {
