@@ -24,21 +24,21 @@ public class Socket: WebSocketDelegate {
     var state: SocketState = SocketState.disconnected
     var handlers:[String:SocketHandlerFunc] = [:]
     
-    init() {
+    public init() {
         self.ws = WebSocket(request: request)
         self.ws.delegate = self
     }
     
-    func setHandlers(handlers:[String:SocketHandlerFunc]) {
+    public func setHandlers(handlers:[String:SocketHandlerFunc]) {
         self.handlers = handlers
     }
     
-    func connect() {
+    public func connect() {
         self.state = .connecting
         self.ws.connect()
     }
     
-    func didReceive(event: WebSocketEvent, client: WebSocket) {
+    public func didReceive(event: WebSocketEvent, client: WebSocket) {
         switch event {
         case .connected(_):
             self.state = .connected

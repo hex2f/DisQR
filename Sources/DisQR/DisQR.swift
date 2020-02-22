@@ -25,7 +25,7 @@ public class Authenticator {
     public var user:User?
     public var fingerprint:String?
     
-    init() throws {
+    public init() throws {
         self.crypto = try Crypto()
         self.socket = Socket()
     }

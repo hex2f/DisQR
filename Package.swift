@@ -33,6 +33,7 @@ let package = Package(
                 "Starscream",
                 "RSAPublicKeyExporter",
                 "SwiftyJSON",
+                "DisQR",
             ]),
         .testTarget(
             name: "DisQRTests",

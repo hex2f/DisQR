@@ -14,7 +14,7 @@ public class Crypto {
     var publicKey: SecKey
     public var publicBase64: String
     
-    init () throws {
+    public init () throws {
         let attributes: [String: Any] = [
             kSecAttrKeyType as String: kSecAttrKeyTypeRSA,
             kSecAttrKeySizeInBits as String: 2048,

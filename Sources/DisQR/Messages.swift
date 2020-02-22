@@ -14,11 +14,11 @@ public class Messages {
     static var PENDING_FINISH = "pending_finish"
     static var FINISH = "finish"
     
-    static func json_op(message:String) -> String {
+    public static func json_op(message:String) -> String {
         return "{\"op\":\"\(message)\"}"
     }
     
-    static func json(op:String, key:String, value:String) -> String {
+    public static func json(op:String, key:String, value:String) -> String {
         return "{\"op\":\"\(op)\",\"\(key)\":\"\(value)\"}"
     }
 }
