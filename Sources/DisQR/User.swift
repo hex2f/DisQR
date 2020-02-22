@@ -7,11 +7,11 @@
 
 public extension DisQR {
     public class User {
-        var id:String = ""
-        var username:String = ""
-        var discrim:String = ""
-        var avatarHash:String = ""
-        var token:String = ""
+        public var id:String = ""
+        public var username:String = ""
+        public var discrim:String = ""
+        public var avatarHash:String = ""
+        public var token:String = ""
         
         func from_payload(payload:String) {
             let values = payload.split(separator: ":")
