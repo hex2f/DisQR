@@ -44,9 +44,11 @@ public extension DisQR {
             case .connected(_):
                 self.state = .connected
                 if self.handlers["connected"] != nil { self.handlers["connected"]!(JSON()) }
+                break
             case .disconnected(_, _):
                 self.state = .disconnected
                 if self.handlers["disconnected"] != nil { self.handlers["disconnected"]!(JSON()) }
+                break
             case .text(let string):
                 do {
                     let json = try JSON(data: string.data(using: .utf8, allowLossyConversion: false)!)
@@ -55,20 +57,15 @@ public extension DisQR {
                 } catch {
                     print(error)
                 }
-            case .binary(_):
-                break;
-            case .ping(_):
-                break
-            case .pong(_):
-                break
-            case .viablityChanged(_):
-                break
-            case .reconnectSuggested(_):
                 break
             case .cancelled:
                 self.state = .disconnected
+                break
             case .error:
                 self.state = .disconnected
+                break
+            default:
+                break
             }
         }
     }
